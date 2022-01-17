@@ -14,10 +14,15 @@ const getMoviesbySearchTerm = async term => {
     console.log(searchResults.data);
     return searchResults.data;
 }
-// getMoviesbySearchTerm('Titanic');
+const getMoviedetailsById = async movieId => {
+    const detailsResults = await axios.get(`${apiUrl}/?apikey=${apiKey}&i=${movieId}`);
+    console.log(detailsResults.data);
+    return detailsResults.data;
+}
 
 module.exports = {
     getMoviesbySearchTerm: getMoviesbySearchTerm,
+    getMoviedetailsById: getMoviedetailsById,
 };
 
 

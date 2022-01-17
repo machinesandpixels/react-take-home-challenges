@@ -1,10 +1,11 @@
 import logo from './logo.svg';
-import { getMoviesbySearchTerm }  from './utils.js';
+import { getMoviesbySearchTerm,  getMoviedetailsById }  from './utils.js';
 import './App.css';
 
 function App() {
  
   { getMoviesbySearchTerm('Titanic'); }
+  { getMoviedetailsById('tt0078346'); }
 
   return (
     <div className="App">
